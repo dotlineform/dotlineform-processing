@@ -3,17 +3,16 @@ draft: false
 doc_id: d-20260714-164200-381988
 title: Processing Project Setup
 added_date: "2026-07-14 16:42:00"
-last_updated: "2026-08-31 23:14:43"
+last_updated: "2026-11-18"
 parent_id: d-20260720-101826-994dd0
 ---
-
 # Processing Project Setup
 
-Historical repository incorporation and setup record for the separate Processing project. Current project and media boundaries belong to its owner. [Current reference](../studio/Processing.md)
+Project-owned incorporation, recovery and authoring/rendering design record. Environment versions and completed steps below describe their recorded date; the work sequence also includes proposals rather than delivered capabilities. [Current project map](README.md) · [Runnable project instructions](../../processing/projects/InkEngine/README.md)
 
 Bring the existing unfinished [Processing](https://processing.org) projects into this repository, recover how they work, and establish a maintainable structure for continuing them.
 
-This Studio-owned document covers repository hosting, local environment, lifecycle, and integration. The Processing documentation scope (`/docs/?scope=processing&doc=d-20260714-092047-06a5db`) remains the home for conceptual and technical documentation about the projects themselves.
+Processing documentation now lives in `documentation/Processing/`. Former Docs scopes and Copy to Analysis routes are retired; this dated record does not establish a current collection registration or website lifecycle.
 
 The primary aim is high-quality still artwork for print. Processing in Java mode remains the canonical implementation and rendering environment.
 
@@ -26,7 +25,7 @@ Interactivity belongs mainly to the authoring application:
 
 ## Application
 
-Installed version of Processing is current version 4.5.5
+The setup record used Processing 4.5.5.
 
 [CLI](https://github.com/processing/processing4/wiki/Command-Line) symlinked:
 
@@ -46,12 +45,11 @@ A p5.js version may be considered later.
 
 ## Java
 
-Java came bundled with Processing—not from a separate installation.
-Processing is using:
+Java came bundled with Processing. The recorded installation used:
 
 `/Applications/Processing.app/Contents/app/resources/jdk/bin/java`
 
-That is Temurin/OpenJDK 17.0.19+10 from Eclipse Adoptium. macOS cannot find any separately installed system Java runtime, so there’s nothing additional  to manage. That version information will be useful if InkEngine ever behaves differently after a Processing upgrade.
+The record identified Temurin/OpenJDK 17.0.19+10 from Eclipse Adoptium and no separately installed system Java runtime. This describes the setup environment rather than a fresh machine inspection; the version is useful when comparing behaviour after an upgrade.
 
 ## additional setup
 
@@ -81,16 +79,9 @@ processing/
     simple-composite/
 ```
 
-`InkEngine` is the first runnable recovered project. The folder and main `.pde`
-file use the same name as required by Processing. Its historical
-`sketch-250309a-ink` Docs Viewer identity remains in place so the existing child
-notes do not need a simultaneous hierarchy migration.
+`InkEngine` is the first runnable recovered project. The folder and main `.pde` file use the same name as required by Processing. At incorporation, its historical `sketch-250309a-ink` document identity was retained to avoid a simultaneous note-hierarchy migration; that does not establish a current Docs workspace registration.
 
-`recovered/` is a preservation area, not an active sketch directory. The loose
-LayerPermutations and SimpleComposite files remain there until their evolution,
-dependencies, and runnable baselines are understood. Shared code should be
-introduced only after more than one active project demonstrates a real shared
-boundary.
+`recovered/` is a preservation area, not an active sketch directory. The loose LayerPermutations and SimpleComposite files remain there until their evolution, dependencies, and runnable baselines are understood. Shared code should be introduced only after more than one active project demonstrates a real shared boundary.
 
 ### Tracked Material
 
@@ -100,8 +91,7 @@ Track:
 - small configuration and preset files
 - project notes and reference documentation
 - dependency and version information
-- deliberately pinned, redistributable sketchbook libraries required for a
-  reproducible build
+- deliberately pinned, redistributable sketchbook libraries required for a reproducible build
 - scripts that reproduce an export or prepare a publication copy
 
 ### Generated And External Material
@@ -112,14 +102,12 @@ Do not routinely track:
 - print masters that are too large for ordinary Git history
 - caches, temporary frames, or animation sequences
 - Processing build output
-- locally installed libraries that have not been deliberately pinned for repo
-  distribution
+- locally installed libraries that have not been deliberately pinned for repo distribution
 - licensed fonts or assets that cannot be redistributed
 
 Processing work media and print masters belong beneath the configured external `$DOTLINEFORM_PROJECTS_BASE_DIR/processing/<project-id>/` root. Print masters are important artwork, so their storage and backup policy remains explicit even though they are not committed to Git.
 
-Processing compiler output under `processing/projects/**/out/` is ignored and
-must not be committed.
+Processing compiler output under `processing/projects/**/out/` is ignored and must not be committed.
 
 ## External Project Workspace
 
@@ -139,30 +127,18 @@ The historical `processing/previews/ink-engine/` repository copies were retired 
 
 The repo has three distinct asset classes:
 
-1. Sketch source assets and tracked presets required to run or reproduce a
-   project belong inside its `processing/projects/<Sketch>/` directory.
-2. Small, stable files intended as downloadable companions to a Docs Viewer
-   document belong in `docs-viewer/scopes/processing/published/media/files/`.
+1. Sketch source assets and tracked presets required to run or reproduce a project belong inside its `processing/projects/<Sketch>/` directory.
+2. Small curated document attachments belong to an explicitly configured Working document/media owner. The former `docs-viewer/scopes/processing/published/media/files/` path is retired; [Document media](../reference/Media_And_Asset_Handling.md) owns the current boundary.
 3. Large inputs, repeated renders, print masters, and bulk project collections belong under `$DOTLINEFORM_PROJECTS_BASE_DIR/processing/<project-id>/`; selected public work media uses the existing Catalogue workflow rather than a repository preview copy.
 
-Standalone images and downloadable files are now published from the active
-source editor without creating wrapper documents. This is still not a
-general-purpose bulk asset ingest workflow. Existing ZIP, spreadsheet, and CSV
-attachments stay in place until their owning documents and reproducibility value
-are reviewed.
+Standalone images and downloadable files are now published from the active source editor without creating wrapper documents. This is still not a general-purpose bulk asset ingest workflow. Existing ZIP, spreadsheet, and CSV attachments stay in place until their owning documents and reproducibility value are reviewed.
 
-The I Ching project is the first pressure test: its roughly 150 MB of files and
-images should not be published file-by-file merely to make them visible in Docs
-Viewer. Before moving it, decide:
+The I Ching project is the first pressure test: its roughly 150 MB of files and images should not be published file-by-file merely to make them visible in Docs Viewer. Before moving it, decide:
 
-- whether I Ching remains a project described within the Processing scope or
-  becomes its own Docs Viewer scope
-- which files are working assets, generated artifacts, archival sources, or
-  curated document attachments
-- which curated files should become scope-owned Docs Viewer media and which
-  remain Processing project or archival material
-- whether large curated media needs a configured R2 destination without making
-  the provider part of ordinary authoring.
+- whether I Ching remains a project described within the Processing scope or becomes its own Docs Viewer scope
+- which files are working assets, generated artifacts, archival sources, or curated document attachments
+- which curated files should become scope-owned Docs Viewer media and which remain Processing project or archival material
+- whether large curated media needs a configured R2 destination without making the provider part of ordinary authoring.
 
 ## First Import Boundary
 
@@ -326,7 +302,7 @@ Backfill Javadoc first for:
 
 Do not document every obvious helper or repeat type signatures in prose. If a method remains difficult to explain because it receives many unrelated parameters or changes several kinds of state, review its design before writing a long comment.
 
-The Processing Docs Viewer scope should contain hand-written project maps, preset/export instructions, and architectural explanations. Javadoc-generated reference pages can be considered later, after the source comments are useful and the mix of `.pde` and `.java` files is understood.
+The Processing documentation folder should contain hand-written project maps, preset/export instructions, and architectural explanations. Javadoc-generated reference pages can be considered later, after the source comments are useful and the mix of `.pde` and `.java` files is understood.
 
 ## Verification
 
@@ -356,22 +332,20 @@ Any later p5.js work should be treated as a separate adaptation with its own pur
 
 ## Initial Work Sequence
 
-Current recovery status:
+Recorded recovery status:
 
 - the repo-owned `processing/` sketchbook structure is established
 - `InkEngine` is renamed, documented, and builds with Processing 4.5.5
 - ControlP5 2.2.6 is pinned in the sketchbook
 - named slider configurations and historical previews are preserved
 - generated compiler output is removed and ignored
-- the LayerPermutations and SimpleComposite families remain preserved source,
-  not yet runnable maintained projects
-- code mapping, refactoring, deterministic rendering, and print export have not
-  begun
+- the LayerPermutations and SimpleComposite families remain preserved source, not yet runnable maintained projects
+- code mapping, refactoring, deterministic rendering, and print export have not begun
 
 1. Create the `processing/` source area and import the first project unchanged.
 2. Preserve the baseline and inventory its environment and dependencies.
 3. Recover a runnable version and capture known output.
-4. Write the first project map and add it to the Processing Docs Viewer scope.
+4. Write the first project map and add it to the Processing documentation folder.
 5. Review the code, parameter flow, configuration, rendering, and export boundaries.
 6. Establish Javadoc conventions on representative classes and functions.
 7. Separate preview controls from reusable artwork configuration and rendering where needed.
@@ -391,8 +365,7 @@ Current recovery status:
 - preset file shape and naming
 - appropriate balance between `.pde` tabs and ordinary `.java` classes
 - Processing-aware formatting, linting, and testing options
-- whether large related projects such as I Ching need their own Docs Viewer
-  scope and which selected outputs should become scope-owned media
+- whether large related projects such as I Ching need their own Docs Viewer scope and which selected outputs should become scope-owned media
 
 ## Intended Outcome
 
@@ -403,5 +376,5 @@ Current recovery status:
 - chosen works can be reproduced from presets and seeds
 - high-resolution and vector output are deliberate, documented operations
 - the repo contains maintainable source and small reference material without accumulating every print master
-- Javadoc and the Processing Docs Viewer scope provide a useful function and architecture reference
+- Javadoc and the Processing documentation folder provide a useful function and architecture reference
 - a future browser version remains possible without becoming a present constraint
