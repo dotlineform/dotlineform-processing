@@ -9,9 +9,11 @@ parent_id: d-20260720-101826-994dd0
 
 # Processing Project Setup
 
+Historical repository incorporation and setup record for the separate Processing project. Current project and media boundaries belong to its owner. [Current reference](../Processing.md)
+
 Bring the existing unfinished [Processing](https://processing.org) projects into this repository, recover how they work, and establish a maintainable structure for continuing them.
 
-This Studio-owned document covers repository hosting, local environment, lifecycle, and integration. The [Processing documentation scope](/docs/?scope=processing&doc=d-20260714-092047-06a5db) remains the home for conceptual and technical documentation about the projects themselves.
+This Studio-owned document covers repository hosting, local environment, lifecycle, and integration. The Processing documentation scope (`/docs/?scope=processing&doc=d-20260714-092047-06a5db`) remains the home for conceptual and technical documentation about the projects themselves.
 
 The primary aim is high-quality still artwork for print. Processing in Java mode remains the canonical implementation and rendering environment.
 
