@@ -9,7 +9,7 @@ parent_id: d-20260720-101826-994dd0
 
 # Processing Project Setup
 
-Historical repository incorporation and setup record for the separate Processing project. Current project and media boundaries belong to its owner. [Current reference](../Processing.md)
+Historical repository incorporation and setup record for the separate Processing project. Current project and media boundaries belong to its owner. [Current reference](../studio/Processing.md)
 
 Bring the existing unfinished [Processing](https://processing.org) projects into this repository, recover how they work, and establish a maintainable structure for continuing them.
 
