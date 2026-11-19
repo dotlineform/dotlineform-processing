@@ -3,16 +3,16 @@ draft: false
 doc_id: d-20260714-164200-381988
 title: Processing Project Setup
 added_date: "2026-07-14 16:42:00"
-last_updated: "2026-11-18"
+last_updated: "2026-11-19"
 parent_id: d-20260720-101826-994dd0
 ---
 # Processing Project Setup
 
-Project-owned incorporation, recovery and authoring/rendering design record. Environment versions and completed steps below describe their recorded date; the work sequence also includes proposals rather than delivered capabilities. [Current project map](README.md) · [Runnable project instructions](../../processing/projects/InkEngine/README.md)
+Project-owned incorporation, recovery and authoring/rendering design record. Environment versions, paths and completed steps below describe the Processing sketchbook as it was incorporated into `dotlineform-site`. The work sequence includes proposals. [Current project map](README.md) · [Runnable project instructions](../projects/InkEngine/README.md)
 
 Bring the existing unfinished [Processing](https://processing.org) projects into this repository, recover how they work, and establish a maintainable structure for continuing them.
 
-Processing documentation now lives in `documentation/Processing/`. Former Docs scopes and Copy to Analysis routes are retired; this dated record does not establish a current collection registration or website lifecycle.
+The standalone sketchbook and current documentation live in `dotlineform-processing`. Refer to the project map for the current external media and site handoff.
 
 The primary aim is high-quality still artwork for print. Processing in Java mode remains the canonical implementation and rendering environment.
 
@@ -128,7 +128,7 @@ The historical `processing/previews/ink-engine/` repository copies were retired 
 The repo has three distinct asset classes:
 
 1. Sketch source assets and tracked presets required to run or reproduce a project belong inside its `processing/projects/<Sketch>/` directory.
-2. Small curated document attachments belong to an explicitly configured Working document/media owner. The former `docs-viewer/scopes/processing/published/media/files/` path is retired; [Document media](../reference/Media_And_Asset_Handling.md) owns the current boundary.
+2. Small curated document attachments belong to an explicitly configured Working document/media owner. The site documentation describes the current media boundary. [Document media](https://github.com/dotlineform/dotlineform-site/blob/main/documentation/reference/Media_And_Asset_Handling.md)
 3. Large inputs, repeated renders, print masters, and bulk project collections belong under `$DOTLINEFORM_PROJECTS_BASE_DIR/processing/<project-id>/`; selected public work media uses the existing Catalogue workflow rather than a repository preview copy.
 
 Standalone images and downloadable files are now published from the active source editor without creating wrapper documents. This is still not a general-purpose bulk asset ingest workflow. Existing ZIP, spreadsheet, and CSV attachments stay in place until their owning documents and reproducibility value are reviewed.

@@ -1,7 +1,6 @@
 # Processing
 
-This directory is the repo-owned Processing sketchbook. Processing 4.5.5 in
-Java mode is the canonical authoring and rendering environment.
+This repository is the Dotlineform Processing sketchbook. Set Processing's sketchbook location to the checkout root. Processing 4.5.5 in Java mode is the authoring and rendering environment.
 
 ## Structure
 
@@ -19,7 +18,7 @@ Processing application must receive that base through its explicit ignored
 project-local configuration; it must not rely on shell environment inheritance
 or fall back to the repository.
 
-Project documentation lives under [documentation/Processing](../documentation/Processing/README.md). Docs Viewer source and managed attachments are separate from this sketchbook and use the explicit Docs workspace/collection configuration. The former Projects-root `docs-viewer/scopes/processing/source/` layout is retired.
+The project guide describes the sketchbook, external media and the Studio handoff. [Processing documentation](documentation/README.md)
 
 ## Projects
 
@@ -43,8 +42,8 @@ the repository root with Processing's bundled Java:
 ink_engine_test_dir=$(mktemp -d /tmp/ink-engine-output-test.XXXXXX)
 /Applications/Processing.app/Contents/app/resources/jdk/bin/javac \
   -d "$ink_engine_test_dir" \
-  processing/projects/InkEngine/OutputWorkspace.java \
-  processing/tests/OutputWorkspaceTest.java
+  projects/InkEngine/OutputWorkspace.java \
+  tests/OutputWorkspaceTest.java
 /Applications/Processing.app/Contents/app/resources/jdk/bin/java \
   -cp "$ink_engine_test_dir" OutputWorkspaceTest
 ```
@@ -57,3 +56,7 @@ ink_engine_test_dir=$(mktemp -d /tmp/ink-engine-output-test.XXXXXX)
 
 Do not extract shared code or choose a canonical recovered version until the
 relevant sketches have been understood and run.
+
+## Licences
+
+New Processing code and documentation owned by Mike Davies are available under MIT. Material previously released under CC0 in `dotlineform-site` retains that dedication. The bundled ControlP5 2.2.6 library by Andreas Schlegel retains its LGPL 2.1-or-later terms and source notices. [MIT](LICENSE) · [Historical CC0](LICENSES/CC0-1.0.txt) · [ControlP5 licence](libraries/controlP5/LICENSE)

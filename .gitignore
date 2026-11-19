@@ -1,0 +1,4 @@
+.DS_Store
+
+/projects/**/out/
+/projects/InkEngine/data/output-config.local.json

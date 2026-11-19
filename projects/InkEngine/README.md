@@ -8,20 +8,19 @@ diffuse particles, textured particles, and a weighted composite.
 
 - Processing 4.5.5
 - Java mode
-- ControlP5 2.2.6 from `processing/libraries/controlP5/`
+- ControlP5 2.2.6 from `libraries/controlP5/`
 - default Processing renderer
 - macOS fonts `Arial`, `Arial-BoldMT`, and `Apple Symbols`
 
-The repo's `processing/` directory must be selected as the Processing
-sketchbook so the IDE and command-line runner can discover ControlP5.
+Set the repository root as the Processing sketchbook so the IDE and command-line runner can discover ControlP5.
 
 ## Run
 
 From the repository root:
 
 ```sh
-processing cli --sketch="$(pwd)/processing/projects/InkEngine" --build
-processing cli --sketch="$(pwd)/processing/projects/InkEngine" --run
+processing cli --sketch="$(pwd)/projects/InkEngine" --build
+processing cli --sketch="$(pwd)/projects/InkEngine" --run
 ```
 
 The VS Code task in `.vscode/tasks.json` is retained from the recovered
@@ -35,8 +34,8 @@ inherits `DOTLINEFORM_PROJECTS_BASE_DIR`. Copy the tracked example to the one
 ignored local configuration file:
 
 ```sh
-cp processing/projects/InkEngine/output-config.example.json \
-  processing/projects/InkEngine/data/output-config.local.json
+cp projects/InkEngine/output-config.example.json \
+  projects/InkEngine/data/output-config.local.json
 ```
 
 Set `projects_base_dir` to the existing absolute readable and writable external
